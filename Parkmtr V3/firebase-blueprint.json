@@ -1,0 +1,80 @@
+{
+  "entities": {
+    "users": {
+      "title": "Users",
+      "description": "User profile accounts and parking lot allocations",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "firstName": { "type": "string" },
+        "lastName": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "password": { "type": "string" },
+        "role": { "type": "string" },
+        "employeeId": { "type": "string" },
+        "defaultVehicleNumber": { "type": "string" },
+        "isAdmin": { "type": "boolean" },
+        "allocatedCategory": { "type": ["string", "null"] },
+        "allocatedLot": { "type": ["number", "null"] },
+        "allocationType": { "type": ["string", "null"] },
+        "inDate": { "type": ["string", "null"] },
+        "inTime": { "type": ["string", "null"] },
+        "outDate": { "type": ["string", "null"] },
+        "outTime": { "type": ["string", "null"] },
+        "allocatedAt": { "type": ["string", "null"] },
+        "registeredAt": { "type": ["string", "null"] }
+      },
+      "required": ["id", "firstName", "lastName", "email"]
+    },
+    "bookings": {
+      "title": "Bookings",
+      "description": "Parking pass bookings and tickets",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "userName": { "type": "string" },
+        "userEmail": { "type": "string" },
+        "spotId": { "type": "string" },
+        "spotCode": { "type": "string" },
+        "zoneName": { "type": "string" },
+        "floorName": { "type": "string" },
+        "branchName": { "type": "string" },
+        "vehicleNumber": { "type": "string" },
+        "vehicleType": { "type": "string" },
+        "startTime": { "type": "string" },
+        "endTime": { "type": "string" },
+        "status": { "type": "string" },
+        "qrCode": { "type": "string" },
+        "pillarLocation": { "type": "string" }
+      },
+      "required": ["id", "userId"]
+    },
+    "parking_logs": {
+      "title": "Parking Logs",
+      "description": "Audit trail and reports of parking check-in and check-out allocations",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "userName": { "type": "string" },
+        "userEmail": { "type": "string" },
+        "phone": { "type": "string" },
+        "vehicleNumber": { "type": "string" },
+        "category": { "type": "string" },
+        "slotNumber": { "type": ["number", "null"] },
+        "allocationType": { "type": "string" },
+        "inDate": { "type": "string" },
+        "inTime": { "type": "string" },
+        "outDate": { "type": ["string", "null"] },
+        "outTime": { "type": ["string", "null"] },
+        "status": { "type": "string" },
+        "actionType": { "type": "string" },
+        "timestamp": { "type": "string" },
+        "actionBy": { "type": ["string", "null"] }
+      },
+      "required": ["id", "userName", "userEmail", "vehicleNumber", "inDate", "inTime"]
+    }
+  }
+}

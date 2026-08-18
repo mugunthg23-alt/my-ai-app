@@ -1,0 +1,6 @@
+{
+  "name": "Ｐａｒｋमि𝘵𝘳",
+  "description": "Smart parking management system with registration, authentication, category allocation, spot occupancy tracking, and QR code gate scanner.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
